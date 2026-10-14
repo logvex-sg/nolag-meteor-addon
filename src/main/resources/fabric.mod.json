@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "antilagaddon",
+  "version": "${version}",
+  "name": "AntiLag Addon",
+  "description": "Client-side anti-lag addon for Meteor Client: reduces rendering work caused by entity, particle and block-entity spam on multiplayer servers without touching server state.",
+  "authors": [
+    "logvex-sg"
+  ],
+  "contact": {
+    "sources": "https://github.com/logvex-sg/nolag-meteor-addon"
+  },
+  "icon": "assets/antilagaddon/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.antilagaddon.AntiLagAddon"
+    ]
+  },
+  "mixins": [
+    "antilagaddon.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "40,180,120",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}"],
+    "meteor-client": "*"
+  }
+}
